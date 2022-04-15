@@ -1,5 +1,0 @@
-Django==3.2.9
-pandas
-boto3
-django-crispy-forms
-crispy-bootstrap5
