@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>{{pageTitle}}</title>
+    <meta name=”description” content=”{{pageDescription}}”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static "css/bootstrap/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/turkey_bowl/turkey-bowl.css" %}" rel="stylesheet">
+    <script src="{% static "js/bootstrap/bootstrap.bundle.min.js" %}"></script>
+    {% block added_static %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">North Seattle Flag Football</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    {% for section_title, section_url in nav_links.items %}
+                    <li class="nav-item">
+                        {% if active_section == section_title %}
+                        <a class="nav-link active" aria-current="page" href="{{section_url}}">{{section_title}}</a>
+                        {% else %}
+                        <a class="nav-link" href="{{section_url}}">{{section_title}}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="banner">
+            {% block banner %}{% endblock %}
+        </div>
+        {% block secondarynav %}{% endblock %}
+        <div class="container-fluid mt-3" id="page-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+<footer class="mt-auto" style="display: block; background-color: black; height: 25px;">&nbsp;</footer>
+</html>

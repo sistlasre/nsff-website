@@ -1,0 +1,9 @@
+{% extends "turkey_bowl/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="/turkey-bowl/results-management/" method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

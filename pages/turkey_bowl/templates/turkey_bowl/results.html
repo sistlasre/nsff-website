@@ -1,0 +1,28 @@
+{% extends "turkey_bowl/base.html" %}
+{% block content %}
+<div class="games accordion" id="turkey-bowl-results">
+    {% for result in results %}
+    <div class="accordionItem">
+        <h2 class="accordion-header" id="heading{{ result.1}}">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ result.1 }}" aria-expanded="true" aria-controls="collapse{{ result.1 }}">{{ result.0 }}</button>
+        </h2>
+        <div id="collapse{{ result.1 }}" class="accordion-collapse collapse" aria-labelledby="heading{{ result.1 }}" data-bs-parent="#turkey-bowl-results">
+            <div class="accordion-body">
+                {% for game in result.2 %}
+                <div class="game">
+                    <div class="team winner">
+                        <div class="name">{{ game.winner }}</div>
+                        <div class="score">{{ game.winner_score }}</div>
+                    </div>
+                    <div class="team loser">
+                        <div class="name">{{ game.loser }}</div>
+                        <div class="score">{{ game.loser_score }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "turkey_bowl/base.html" %}
+{% block content %}
+<div class="table-responsive">
+  <table class="table table-bordered border-primary table-striped turkey-bowl">
+    <tr>
+        {% for color in colors %}
+        <th class="{{ css_colors|get_item:color }}">{{ color }}</th>
+        {% endfor %}
+    </tr>
+    <tr class="captains">
+        {% for captain in captains %}
+        <td>{{captain}}</td>
+        {% endfor %}
+    </tr>
+    {% for players in teams_list %}
+    <tr>
+        {% for player in players %}
+        <td>{{player}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

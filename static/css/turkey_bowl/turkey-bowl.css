@@ -1,0 +1,87 @@
+table.turkey-bowl td, th {
+   text-align: center;
+}
+table.turkey-bowl th.heliconia {
+    background-color: hotpink;
+}
+table.turkey-bowl th.charcoal {
+    background-color: slategray;
+}
+table.turkey-bowl th.gold {
+    background-color: gold;
+}
+table.turkey-bowl th.red {
+    background-color: red;
+}
+table.turkey-bowl th.lime-green {
+    background-color: limegreen;
+}
+table.turkey-bowl th.purple {
+    background-color: mediumpurple;
+}
+table.turkey-bowl th.turquoise {
+    background-color: turquoise;
+}
+table.turkey-bowl th.ice-grey {
+    background-color: gainsboro;
+}
+table.turkey-bowl tr.captains > td {
+    background-color: black;
+    color: ghostwhite;
+}
+.banner {
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color: gold;
+    font-size: 24px;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.sub-nav.nav.nav-tabs {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+.turkey-bowl-fields {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 576px;
+    width: 75%;
+}
+
+#page-content {
+    padding-bottom: 20px;
+}
+
+.game {
+    border: 2px solid;
+    border-radius: 5px;
+    height: 100px;
+    margin: 5px;
+}
+
+.game .team {
+    height: 50px;
+    position: relative;
+}
+
+.game .team.winner {
+    border-bottom: 1px dotted;
+    font-weight: bold;
+}
+
+.game .team div {
+    position: absolute;
+    top: 10px;
+}
+
+.game .team .name {
+    left: 10px;
+}
+
+.game .team .score {
+    right: 10px;
+}
+

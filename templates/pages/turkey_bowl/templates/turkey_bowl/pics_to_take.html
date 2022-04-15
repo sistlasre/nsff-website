@@ -1,0 +1,11 @@
+{% extends "turkey_bowl/base.html" %}
+{% block content %}
+<div class="page-header"><h1>Pictures We Should Plan on Taking</h1></div>
+<div id="pictures-to-take">
+    <ul>
+        {% for picture in pictures_to_take %}
+        <li>{{ picture }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
